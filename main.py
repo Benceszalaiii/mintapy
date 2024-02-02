@@ -1,6 +1,5 @@
-from game import Game
+from game import Ninja
 def main():
-    game = Game()
-    game.start()
+    Ninja()
 if __name__ == "__main__":
     main()
