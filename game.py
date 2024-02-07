@@ -1,7 +1,7 @@
 
 import pygame
 import random
-from settings import WIDTH, BG_COLOR, FONT_COLOR, HEIGHT
+from settings import WIDTH, BG_COLOR, FONT_COLOR, HEIGHT, FPS
 
 
 
@@ -121,7 +121,6 @@ class Fruit(pygame.sprite.Sprite):
 
 
 def collision_sprite():
-    
     if samurai.sprite.attack_mode:
         if pygame.sprite.spritecollide(samurai.sprite, fruit_group, True):
             return True
@@ -152,10 +151,10 @@ fruit_group = pygame.sprite.Group()
 fruit_timer = pygame.USEREVENT + 1
 pygame.time.set_timer(fruit_timer, 1000)
 
-score = 0
+score: int = 0
 game_font = pygame.font.SysFont('arial', 30, bold=True)
 
-running = True
+running: bool = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -179,6 +178,6 @@ while running:
     display_score()
 
     pygame.display.update()
-    clock.tick(60)
+    clock.tick(FPS)
 
 pygame.quit()
