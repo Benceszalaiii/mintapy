@@ -1,11 +1,8 @@
 
 import pygame
 import random
+from settings import WIDTH, BG_COLOR, FONT_COLOR, HEIGHT
 
-WIDTH = 1280
-HEIGHT = 620
-BG_COLOR = (200, 200, 200)
-FONT_COLOR = (27, 131, 142)
 
 
 class Samurai(pygame.sprite.Sprite):
