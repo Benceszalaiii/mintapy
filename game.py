@@ -1,6 +1,3 @@
-
-from tkinter import font
-from tkinter.font import Font
 import pygame
 import random
 from settings import WIDTH, BG_COLOR, FONT_COLOR, HEIGHT, FPS
