@@ -135,7 +135,7 @@ def display_score():
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('WE SUPER LIT WE TOOK A HIT')
+pygame.display.set_caption('mintapy')
 clock = pygame.time.Clock()
 
 platform_surf = pygame.image.load('surface.png').convert_alpha()
