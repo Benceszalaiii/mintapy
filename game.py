@@ -41,10 +41,10 @@ class Samurai(pygame.sprite.Sprite):
             rect_center = self.rect.center
             self.rect = self.image.get_rect(center=rect_center)
 
-        if keys[pygame.K_RIGHT] and self.rect.right < WIDTH:
+        if keys[pygame.K_RIGHT] and self.rect.right < WIDTH and not keys[pygame.K_LEFT]:
             self.x_movement(self.speed)
             self.samurai_forward: bool = True
-        if keys[pygame.K_LEFT] and self.rect.left > 0:
+        elif keys[pygame.K_LEFT] and self.rect.left > 0 and not keys[pygame.K_RIGHT]:
             self.x_movement(-self.speed)
             self.samurai_forward: bool = False
         if keys[pygame.K_UP] and self.on_ground:
